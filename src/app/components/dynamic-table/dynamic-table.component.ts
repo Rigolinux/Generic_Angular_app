@@ -1,0 +1,14 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-dynamic-table',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './dynamic-table.component.html',
+  styleUrls: ['./dynamic-table.component.css']
+})
+export class DynamicTableComponent {
+  @Input() columns: { key: string, label: string }[] = [];
+  @Input() data: any[] = [];
+}

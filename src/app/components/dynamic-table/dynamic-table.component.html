@@ -1,0 +1,14 @@
+<div class="overflow-x-auto">
+  <table class="min-w-full border border-gray-200 rounded-lg shadow-sm">
+    <thead class="bg-gray-100">
+      <tr>
+        <th *ngFor="let col of columns" class="px-4 py-2 text-left font-semibold text-gray-700 border-b">{{ col.label }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data" class="hover:bg-blue-50">
+        <td *ngFor="let col of columns" class="px-4 py-2 border-b">{{ row[col.key] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
